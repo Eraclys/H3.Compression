@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H3.Compression", "H3.Compression\H3.Compression.csproj", "{0D5AE5F6-8758-4A87-A436-D37E28900FEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H3.Compression.Tests", "H3.Compression.Tests\H3.Compression.Tests.csproj", "{810AAB20-2EA1-4C6A-905B-40747D51F257}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D5AE5F6-8758-4A87-A436-D37E28900FEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D5AE5F6-8758-4A87-A436-D37E28900FEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D5AE5F6-8758-4A87-A436-D37E28900FEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D5AE5F6-8758-4A87-A436-D37E28900FEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{810AAB20-2EA1-4C6A-905B-40747D51F257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{810AAB20-2EA1-4C6A-905B-40747D51F257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{810AAB20-2EA1-4C6A-905B-40747D51F257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{810AAB20-2EA1-4C6A-905B-40747D51F257}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
