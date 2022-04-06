@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace H3.Compression
 {
@@ -7,10 +6,14 @@ namespace H3.Compression
     {
         public static byte[] Encode(RepeatedDelta repeatedDelta)
         {
-            var results = new List<byte>();
-            results.AddRange(ConstantEncoder64.Encode(repeatedDelta.Delta));
-            results.AddRange(RepeatCountEncoder.Encode(repeatedDelta.RepeatCount - 1));
-            return results.ToArray();
+            var constant = ConstantEncoder64.Encode(repeatedDelta.Delta);
+            var repeatCount = RepeatCountEncoder.Encode(repeatedDelta.RepeatCount - 1);
+
+            var results = new byte[constant.Length + repeatCount.Length];
+            Array.Copy(constant, results, constant.Length);
+            Array.Copy(repeatCount, 0, results, constant.Length, repeatCount.Length);
+            
+            return results;
         }
 
         public static ReadOnlySpan<byte> Decode(ReadOnlySpan<byte> bytes, out RepeatedDelta repeatedDelta)
