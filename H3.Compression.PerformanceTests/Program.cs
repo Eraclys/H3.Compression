@@ -6,7 +6,7 @@ namespace H3.Compression.PerformanceTests
     {
         public static void Main()
         {
-            BenchmarkRunner.Run<RepeatedDeltaEncoder2Benchmarks>();
+            BenchmarkRunner.Run<RepeatedDeltaEncoder6Benchmarks>();
         }
     }
 }

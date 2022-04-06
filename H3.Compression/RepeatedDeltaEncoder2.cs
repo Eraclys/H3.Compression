@@ -15,8 +15,8 @@ namespace H3.Compression
 
             var constant = ConstantEncoder2.Encode(repeatedDelta.Delta, maxValue);
             var repeatCount = RepeatCountEncoder.Encode(repeatedDelta.RepeatCount - maxValue);
+            
             var results = new byte[repeatCount.Length + 1];
-
             results[0] = constant;
             Array.Copy(repeatCount, 0, results, 1, repeatCount.Length);
             return results;
