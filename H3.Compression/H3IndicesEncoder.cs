@@ -6,12 +6,12 @@ namespace H3.Compression
 {
     public static class H3IndicesEncoder
     {
-        public static byte[] Encode(this IReadOnlyCollection<ulong> data)
+        public static byte[] Encode(IEnumerable<ulong> data)
         {
             var ordered = Prepare(data);
            
-            var resolution =  (byte)((data.First() & 0xF0000000000000L) >> 52);
-            var bytes = new List<byte>{resolution};
+            var resolution =  (byte)((ordered.First() & 0xF0000000000000L) >> 52);
+            var bytes = new List<byte>(ordered.Count){resolution};
             var shiftValue = (15 - resolution) * 3;
             var previousValue = ordered[0];
             var currentDelta =  previousValue >> shiftValue;
@@ -42,25 +42,27 @@ namespace H3.Compression
             return bytes.ToArray();
         }
         
-        public static IEnumerable<ulong> Decode(this ReadOnlySpan<byte> bytes)
+        public static IEnumerable<ulong> Decode(ReadOnlySpan<byte> bytes)
         {
-            var results = new List<ulong>();
             var resolution = bytes[0];
             var shiftValue = (15 - resolution) * 3;
             var fillMask = ulong.MaxValue >> (64 - shiftValue);
             var previousValue = 0UL;
+            var results = new List<ulong>(bytes.Length);
             bytes = bytes.Slice(1);
 
             while (!bytes.IsEmpty)
             {
                 bytes = RepeatedDeltaEncoder.Decode(bytes, out var repeatedDelta);
+                var delta = (repeatedDelta.Delta << shiftValue) | fillMask;
 
                 for (var i = 0UL; i < repeatedDelta.RepeatCount; i++)
                 {
-                    var delta = (repeatedDelta.Delta << shiftValue) + (results.Count == 0 ? fillMask: 0);
                     previousValue += delta;
                     results.Add(previousValue);
                 }
+
+                fillMask = 0;
             }
 
             return results;

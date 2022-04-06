@@ -26,7 +26,7 @@ namespace H3.Compression.Tests
                 .Select(x => ulong.Parse(x, NumberStyles.HexNumber))
                 .ToArray();
 
-            var encoded = indices.Encode();
+            var encoded = H3IndicesEncoder.Encode(indices);
             
             var decoded = H3IndicesEncoder.Decode(encoded).ToList();
 
