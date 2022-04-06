@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace H3.Compression
 {
@@ -9,15 +8,16 @@ namespace H3.Compression
         
         public static byte[] Encode(ulong repeatCount)
         {
-            var results = new List<byte>();
-	
+            Span<byte> results = stackalloc byte[11];
+            var index = 0;
+            
             while (repeatCount > 0)
             {
-                results.Add((byte)(0b01000000 | (byte)(repeatCount % 63)));
+                results[index++] = (byte)(0b01000000 | (byte)(repeatCount % 63));
                 repeatCount /= 63;
             }
 	
-            return results.ToArray();
+            return results.Slice(0, index).ToArray();
         }
         
         public static ReadOnlySpan<byte> Decode(ReadOnlySpan<byte> bytes, out ulong repeatCount)

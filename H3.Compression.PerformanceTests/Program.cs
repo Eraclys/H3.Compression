@@ -6,7 +6,7 @@ namespace H3.Compression.PerformanceTests
     {
         public static void Main()
         {
-            BenchmarkRunner.Run<ConstantEncoder64Benchmarks>();
+            BenchmarkRunner.Run<RepeatCounterEncoder64Benchmarks>();
         }
     }
 }
