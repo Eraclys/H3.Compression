@@ -1,11 +1,11 @@
 namespace H3.Compression
 {
-    readonly struct Vector2
+    public readonly struct RepeatedDelta
     {
         public readonly ulong Delta;
-        public readonly int RepeatCount;
+        public readonly ulong RepeatCount;
 
-        public Vector2(ulong delta, int repeatCount)
+        public RepeatedDelta(ulong delta, ulong repeatCount)
         {
             Delta = delta;
             RepeatCount = repeatCount;

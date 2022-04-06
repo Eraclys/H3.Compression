@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H3.Compression", "H3.Compre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H3.Compression.Tests", "H3.Compression.Tests\H3.Compression.Tests.csproj", "{810AAB20-2EA1-4C6A-905B-40747D51F257}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H3.Compression.PerformanceTests", "H3.Compression.PerformanceTests\H3.Compression.PerformanceTests.csproj", "{BCEB7BE3-140B-477F-A243-8A1F545E5417}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{810AAB20-2EA1-4C6A-905B-40747D51F257}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{810AAB20-2EA1-4C6A-905B-40747D51F257}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{810AAB20-2EA1-4C6A-905B-40747D51F257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCEB7BE3-140B-477F-A243-8A1F545E5417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCEB7BE3-140B-477F-A243-8A1F545E5417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCEB7BE3-140B-477F-A243-8A1F545E5417}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCEB7BE3-140B-477F-A243-8A1F545E5417}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

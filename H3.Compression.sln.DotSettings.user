@@ -1,6 +1,13 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cc3288c8_002Deb25_002D4a47_002D9c75_002Db725aa13bb86/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ShouldEncode" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::810AAB20-2EA1-4C6A-905B-40747D51F257::net5.0::H3.Compression.Tests.EncoderTests.ShouldEncode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::810AAB20-2EA1-4C6A-905B-40747D51F257::net5.0::H3.Compression.Tests.EncoderTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::810AAB20-2EA1-4C6A-905B-40747D51F257::net5.0::H3.Compression.Tests.ConstantEncoder2Tests.ShouldEncodeAndDecode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::810AAB20-2EA1-4C6A-905B-40747D51F257::net5.0::H3.Compression.Tests.ConstantEncoder6Tests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::810AAB20-2EA1-4C6A-905B-40747D51F257::net5.0::H3.Compression.Tests.ConstantEncoder64Tests.ShouldEncodeAndDecode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::810AAB20-2EA1-4C6A-905B-40747D51F257::net5.0::H3.Compression.Tests.RepeatCountEncoderTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::810AAB20-2EA1-4C6A-905B-40747D51F257::net5.0::H3.Compression.Tests.RepeatedDeltaEncoder2Tests.ShouldEncodeAndDecode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::810AAB20-2EA1-4C6A-905B-40747D51F257::net5.0::H3.Compression.Tests.RepeatedDeltaEncoder6Tests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::810AAB20-2EA1-4C6A-905B-40747D51F257::net5.0::H3.Compression.Tests.RepeatedDeltaEncoder64Tests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
